@@ -1,0 +1,73 @@
+let currentIdx = 0;
+let totalScore = 0;
+
+function startTest() {
+    const mainSec = document.getElementById('main');
+    const qnaSec = document.getElementById('qna');
+    
+    if (mainSec && qnaSec) {
+        mainSec.style.display = 'none';
+        qnaSec.style.display = 'block';
+        showQuestion();
+    }
+}
+
+function showQuestion() {
+    const q = qnaList[currentIdx];
+    const qText = document.getElementById('q-text');
+    const answerBox = document.querySelector('.answer-box');
+    const progressBar = document.querySelector('.progress-bar');
+
+    if (!qText || !answerBox) return;
+
+    qText.innerText = q.q;
+    answerBox.innerHTML = ''; 
+
+    q.a.forEach((ans) => {
+        const btn = document.createElement('button');
+        btn.className = 'btn answer-btn';
+        btn.innerText = ans.text;
+        
+        btn.onclick = () => {
+            totalScore += ans.score; 
+            next();
+        };
+        answerBox.appendChild(btn);
+    });
+
+    const progress = ((currentIdx + 1) / qnaList.length) * 100;
+    if (progressBar) progressBar.style.width = progress + '%';
+}
+
+function next() {
+    if (currentIdx < qnaList.length - 1) {
+        currentIdx++;
+        showQuestion();
+    } else {
+        showResult();
+    }
+}
+
+function showResult() {
+    const qnaSec = document.getElementById('qna');
+    const resultSec = document.getElementById('result');
+    
+    if (qnaSec && resultSec) {
+        qnaSec.style.display = 'none';
+        resultSec.style.display = 'block';
+    }
+
+    const finalResult = resultList.find(r => totalScore >= r.threshold) 
+                        || resultList[resultList.length - 1];
+
+    const resultName = document.getElementById('result-name');
+    const resultDesc = document.getElementById('result-desc');
+    const resultImg = document.getElementById('result-img');
+
+    if (resultName) resultName.innerText = finalResult.name;
+    if (resultDesc) resultDesc.innerText = finalResult.desc;
+    if (resultImg && finalResult.img) {
+        resultImg.src = `img/${finalResult.img}`;
+        resultImg.alt = finalResult.name;
+    }
+}

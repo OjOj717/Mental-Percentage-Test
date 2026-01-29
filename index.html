@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 멘탈은 몇 % 남아있을까?</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <section id="main">
+            <h1 class="title">내 멘탈은<br>몇 % 남아있을까?</h1>
+            <div class="main-img">
+                <img src="img/0.png" alt="메인 이미지">
+            </div>
+            <p class="subtitle">나도 모르는 내 멘탈 상태,<br>지금 바로 확인해보세요!</p>
+            <button class="btn start-btn" onclick="startTest()">테스트 시작하기</button>
+        </section>
+
+        <section id="qna" style="display: none;">
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="question-box">
+                <h2 id="q-text">질문 텍스트가 들어갑니다.</h2>
+            </div>
+            <div class="answer-box">
+                </div>
+        </section>
+
+        <section id="result" style="display: none;">
+            <h2 class="result-title">당신의 멘탈 잔량은...</h2>
+            <div id="result-name">결과 이름</div>
+            <div class="result-img-box">
+                <img id="result-img" src="" alt="결과 이미지">
+            </div>
+            <p id="result-desc">결과 설명이 들어갑니다.</p>
+            <button class="btn retry-btn" onclick="location.reload()">다시 테스트하기</button>
+        </section>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

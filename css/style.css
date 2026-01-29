@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+@font-face {
+    font-family: 'Cafe24Surround';
+    src: url('https://ghcdn.rawgit.org/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: 'Gamja Flower', 'GamjaFlower', cursive !important;
+}
+
+body {
+    background-color: #2c2c2c; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    min-height: 80vh;
+    padding: 40px 20px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.05);
+    border-radius: 30px;
+    text-align: center;
+}
+
+.title {
+    font-family: 'Cafe24Surround', sans-serif !important;
+    font-size: 2.5rem;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    word-break: keep-all;
+}
+
+#q-text {
+    font-family: 'Cafe24Surround', sans-serif !important;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+.btn {
+    width: 100%;
+    padding: 18px 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #f1f3f5;
+    margin-bottom: 15px;
+    color: #495057;
+    line-height: 1.2;
+}
+
+.start-btn { 
+    background-color: #ffde59; 
+    color: #333; 
+    font-weight: bold; 
+}
+
+.answer-btn:hover { 
+    background-color: #e9ecef; 
+}
+
+#result-name {
+    font-family: 'Cafe24Surround', sans-serif !important;
+    font-size: 2.4rem;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+#result-desc {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.progress-container {
+    background-color: #eee;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+.progress-bar {
+    background-color: #ffde59;
+    height: 100%;
+    width: 0%;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.main-img, .result-img-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.main-img img, .result-img-box img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.qna-img img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
