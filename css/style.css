@@ -21,7 +21,8 @@ body {
 }
 
 .container {
-    background-color: white;
+    background: linear-gradient(180deg, #fdfbfb 25%, #fdfef8 45%, #faffe9 80%, #dbf089 100%);
+    background-attachment: fixed;
     width: 100%;
     max-width: 500px;
     min-height: 80vh;
@@ -29,6 +30,7 @@ body {
     box-shadow: 0px 10px 30px rgba(0,0,0,0.05);
     border-radius: 30px;
     text-align: center;
+    position: relative;
 }
 
 .title {
@@ -40,11 +42,25 @@ body {
     word-break: keep-all;
 }
 
+.subtitle {
+    font-size: 1.2rem;
+    color: #333;
+}
+
 #q-text {
+    min-height: 150px;
     font-family: 'Cafe24Surround', sans-serif !important;
     font-size: 2rem;
-    margin-bottom: 40px;
+    margin-top: 80px;
+    margin-bottom: 50px;
     line-height: 1.4;
+    word-break: keep-all;
+}
+
+.line {
+    font-family: 'Cafe24Surround', sans-serif !important;
+    font-size: 1.1rem;
+    color: #6eac70;
     word-break: keep-all;
 }
 
@@ -63,7 +79,7 @@ body {
 }
 
 .start-btn { 
-    background-color: #ffde59; 
+    background-color: #94e196; 
     color: #333; 
     font-weight: bold; 
 }
@@ -72,10 +88,16 @@ body {
     background-color: #e9ecef; 
 }
 
+#result-per {
+    font-size: 3rem;
+    color: #6eac70;
+    margin-bottom: 15px;
+}
+
 #result-name {
     font-family: 'Cafe24Surround', sans-serif !important;
     font-size: 2.4rem;
-    color: #ff6b6b;
+    color: #dbf089;
     margin-bottom: 15px;
 }
 
@@ -92,7 +114,7 @@ body {
     margin-bottom: 40px;
 }
 .progress-bar {
-    background-color: #ffde59;
+    background-color: #dbf089;
     height: 100%;
     width: 0%;
     border-radius: 5px;
@@ -120,4 +142,18 @@ body {
     width: 100%;
     max-width: 350px;
     height: auto;
+}
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #333;
 }

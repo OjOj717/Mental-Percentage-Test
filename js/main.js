@@ -57,13 +57,15 @@ function showResult() {
         resultSec.style.display = 'block';
     }
 
-    const finalResult = resultList.find(r => totalScore >= r.threshold) 
+    const finalResult = resultList.find(r => totalScore >= r.per) 
                         || resultList[resultList.length - 1];
 
+    const resultper = document.getElementById('result-per');
     const resultName = document.getElementById('result-name');
     const resultDesc = document.getElementById('result-desc');
     const resultImg = document.getElementById('result-img');
 
+    if (resultper) resultper.innerText = finalResult.per + " %";
     if (resultName) resultName.innerText = finalResult.name;
     if (resultDesc) resultDesc.innerText = finalResult.desc;
     if (resultImg && finalResult.img) {
