@@ -1,5 +1,6 @@
 let currentIdx = 0;
 let totalScore = 0;
+const totalStandard = 15;
 
 function startTest() {
     const mainSec = document.getElementById('main');
@@ -29,13 +30,20 @@ function showQuestion() {
         btn.innerText = ans.text;
         
         btn.onclick = () => {
-            totalScore += ans.score; 
+            totalScore += ans.score;
+
+            if (currentIdx === 14) {
+                if (ans.text !== q.a[0].text) {
+                    showResult(); 
+                    return;
+                }
+            }
             next();
         };
         answerBox.appendChild(btn);
     });
 
-    const progress = ((currentIdx + 1) / qnaList.length) * 100;
+    const progress = Math.min((currentIdx + 1) / totalStandard * 100, 100);
     if (progressBar) progressBar.style.width = progress + '%';
 }
 
@@ -57,7 +65,7 @@ function showResult() {
         resultSec.style.display = 'block';
     }
 
-    const finalResult = resultList.find(r => totalScore >= r.per) 
+    const finalResult = resultList.find(r => totalScore >= r.threshold) 
                         || resultList[resultList.length - 1];
 
     const resultper = document.getElementById('result-per');
