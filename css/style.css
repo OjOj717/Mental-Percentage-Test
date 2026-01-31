@@ -35,7 +35,7 @@ body {
 
 .title {
     font-family: 'Cafe24Surround', sans-serif !important;
-    font-size: clamp(1rem, 1.6vw, 3rem);
+    font-size: clamp(2rem, 1.6vw, 3rem);
     color: #333;
     line-height: 1.2;
     margin-bottom: 30px;
@@ -43,14 +43,14 @@ body {
 }
 
 .subtitle {
-    font-size: clamp(0.3rem, 0.8vw, 2rem);
+    font-size: clamp(0.5rem, 0.8vw, 2rem);
     color: #333;
 }
 
 #q-text {
     min-height: 150px;
     font-family: 'Cafe24Surround', sans-serif !important;
-    font-size: clamp(1rem, 1.15vw, 3rem);
+    font-size: clamp(1.1rem, 1.15vw, 3rem);
     margin-top: 70px;
     margin-bottom: 40px;
     line-height: 1.4;
@@ -80,7 +80,7 @@ body {
     padding: 18px 10px;
     border: none;
     border-radius: 15px;
-    font-size: clamp(0.3rem, 1vw, 2rem);
+    font-size: clamp(0.8rem, 1vw, 2rem);
     cursor: pointer;
     transition: 0.3s;
     background-color: #f1f3f5;
@@ -106,7 +106,7 @@ body {
 }
 
 #result-per {
-    font-size: clamp(0.3rem, 2vw, 4rem);
+    font-size: clamp(2.3rem, 2vw, 4rem);
     font-weight: bold;
     color: #6eac70;
     margin-bottom: 15px;
@@ -114,13 +114,13 @@ body {
 
 #result-name {
     font-family: 'Cafe24Surround', sans-serif !important;
-    font-size: clamp(0.3rem, 1.7vw, 4rem);
+    font-size: clamp(2rem, 1.7vw, 4rem);
     color: #dbf089;
     margin-bottom: 15px;
 }
 
 #result-desc {
-    font-size: clamp(0.3rem, 0.7vw, 3rem);
+    font-size: clamp(0.8rem, 0.7vw, 3rem);
     line-height: 1.6;
     color: #555;
 }
@@ -197,18 +197,18 @@ body {
 }
 
 .card-per {
-    font-size: clamp(0.3rem, 1vw, 3rem);
+    font-size: clamp(0.5rem, 1vw, 3rem);
     color: #6eac70;
     font-weight: bold; 
 }
 
 .card-name {
-    font-size: clamp(0.3rem, 1vw, 3rem);
+    font-size: clamp(0.8rem, 1vw, 3rem);
     margin-left: 15px;
 }
 
 .card-desc {
-    font-size: clamp(0.3rem, 0.6vw, 3rem);
+    font-size: clamp(0.5rem, 0.6vw, 3rem);
     margin-bottom: 0;
 }
 
@@ -219,7 +219,7 @@ body {
 }
 
 .all-title {
-    font-size: clamp(0.3rem, 1.3vw, 3rem);
+    font-size: clamp(1rem, 1.3vw, 3rem);
     color: #6eac70;
     font-weight: bold; 
 }
@@ -234,6 +234,6 @@ body {
 }
 
 .copyright {
-    font-size: clamp(0.1rem, 0.5vw, 1rem);
+    font-size: clamp(0.2rem, 0.5vw, 1rem);
     color: #333;
 }
