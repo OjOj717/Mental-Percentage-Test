@@ -1,8 +1,16 @@
 let currentIdx = 0;
 let totalScore = 0;
 const totalStandard = 15;
+let userName = "당신";
 
 function startTest() {
+    const nameInput = document.getElementById('user-name');
+    userName = nameInput.value.trim();
+
+    if (userName === "") {
+        userName = '당신';
+    }
+
     const mainSec = document.getElementById('main');
     const qnaSec = document.getElementById('qna');
     
@@ -63,6 +71,11 @@ function showResult() {
     if (qnaSec && resultSec) {
         qnaSec.style.display = 'none';
         resultSec.style.display = 'block';
+    }
+
+    const resultTitleText = document.getElementById('result-title-text');
+    if (resultTitleText) {
+        resultTitleText.innerText = `${userName}의 멘탈 잔량은...`;
     }
 
     const finalResult = resultList.find(r => totalScore >= r.threshold) 
