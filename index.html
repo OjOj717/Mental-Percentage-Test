@@ -16,6 +16,7 @@
             <p class="subtitle">나도 모르는 내 멘탈 상태,<br>지금 바로 확인해보세요!</p>
             <br>
             <button class="btn start-btn" onclick="startTest()">테스트 시작하기</button>
+            <button class="btn all-btn" onclick="showAllResults()">결과 미리보기</button>
         </section>
 
         <section id="qna" style="display: none;">
@@ -45,7 +46,16 @@
             <p id="result-desc">결과 설명이 들어갑니다.</p>
             <p class="line">· 🪫 · ✧ · ⚡ · ✧ · 🔋 ·</p>
             <button class="btn start-btn" onclick="location.reload()">다시 테스트하기</button>
+            <button class="btn all-btn" onclick="showAllResults()">다른 결과 구경하기</button>
         </section>
+        <section id="all-results" style="display: none;">
+            <h2 class="all-title">모든 멘탈 유형</h2>
+            <br>
+            <div id="all-results-list">
+                </div>
+            <button class="btn start-btn" onclick="location.reload()">홈으로 가기</button>
+        </section>
+
         <footer class="footer">
             <p class="copyright"> ⚡︎ made.by OjOj_717</p>
         </footer>

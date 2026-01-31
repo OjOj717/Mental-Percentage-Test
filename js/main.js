@@ -81,3 +81,31 @@ function showResult() {
         resultImg.alt = finalResult.name;
     }
 }
+
+function showAllResults() {
+    document.getElementById('main').style.display = 'none';
+    document.getElementById('qna').style.display = 'none';
+    document.getElementById('result').style.display = 'none';
+    document.getElementById('all-results').style.display = 'block';
+
+    const listContainer = document.getElementById('all-results-list');
+    listContainer.innerHTML = '';
+
+    resultList.forEach((data) => {
+        const card = document.createElement('div');
+        card.className = 'result-card';
+        card.innerHTML = `
+            <div class="card-inner">
+                <img src="img/${data.img}" alt="${data.name}" class="card-img">
+                <div class="card-content">
+                    <span class="card-per">${data.per}%</span>
+                    <strong class="card-name">${data.name}</strong>
+                    <p class="card-desc">${data.desc}</p>
+                </div>
+            </div>
+            <div class="line">· 🪫 · ✧ · ⚡ · ✧ · 🔋 ·</div>
+        `;
+        listContainer.appendChild(card);
+    });
+    window.scrollTo(0, 0);
+}
