@@ -35,7 +35,7 @@ body {
 
 .title {
     font-family: 'Cafe24Surround', sans-serif !important;
-    font-size: clamp(2rem, 1.6vw, 3rem);
+    font-size: clamp(2rem, 1.7vw, 3rem);
     color: #333;
     line-height: 1.2;
     margin-bottom: 30px;
@@ -98,7 +98,7 @@ body {
     padding: 18px 10px;
     border: none;
     border-radius: 15px;
-    font-size: clamp(0.9rem, 1vw, 2rem);
+    font-size: clamp(0.9rem, 1.1vw, 2rem);
     cursor: pointer;
     transition: 0.3s;
     background-color: #f1f3f5;
